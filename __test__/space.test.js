@@ -2,7 +2,10 @@
 import { SpaceCalculator } from './../src/space.js';
 
 describe('SpaceCalculator', () => {
-  let userAge = new SpaceCalculator(100,80);
+  let userAge;
+  beforeEach(() => {
+    userAge = new SpaceCalculator(100,80);
+  });
 
   test('should return years past life expectancy on Earth', () => {
     userAge.ageOnEarth();
