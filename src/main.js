@@ -3,6 +3,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import {SpaceCalculator} from './space.js';
+
 $(document).ready(function(){
   $("#calculator").submit(function(event) {
     event.preventDefault(); 
@@ -17,7 +18,7 @@ $(document).ready(function(){
     } else {
       $("#earth").html(
         `<li> Age ${spaceAge.earthAge}.</li>
-        <li> Years past expectancy ${spaceAge.earthPastExpectacy}.</li>`);      
+        <li> Years past expectancy ${spaceAge.earthPastExpectacy}.</li>`);     
     } if 
     (spaceAge.age <= spaceAge.expectancy) {
       $("#mercury").html(
@@ -27,6 +28,7 @@ $(document).ready(function(){
       $("#mercury").html(
         `<li>Age ${spaceAge.mercuryAge}. </li>
         <li>Years past expectancy ${spaceAge.mercuryExpectancy}. </li>`);  
+        
     } if 
     (spaceAge.age <= spaceAge.expectancy) {
       $("#venus").html(
@@ -57,3 +59,25 @@ $(document).ready(function(){
     }
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+// import {Mars} from './js/mars.js';
+// import {Venus} from './js/venus.js';
+// import {Jupiter} from './js/jupiter.js';
+// import {Mercury}from './js/mercury.js';
+
+
+// let mercury = new Mercury(newAge, newExpectancy);
+// let venus = new Venus(newAge, newExpectancy);
+// let mars = new Mars(newAge, newExpectancy);
+// let jupiter = new Jupiter(newAge, newExpectancy);
