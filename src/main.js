@@ -2,82 +2,66 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import {SpaceCalculator} from './space.js';
-
+import {Mars} from './js/mars.js';
+import {Venus} from './js/venus.js';
+import {Jupiter} from './js/jupiter.js';
+import {Mercury} from './js/mercury.js';
+import {Earth} from './earth.js';
 $(document).ready(function(){
   $("#calculator").submit(function(event) {
     event.preventDefault(); 
     let newAge = parseInt($("#age").val());
     let newExpectancy = parseInt($("#expectancy").val());
-    let spaceAge = new SpaceCalculator(newAge, newExpectancy);
-    if 
-    (spaceAge.age <= spaceAge.expectancy) {
+    let earthAge = new Earth (newAge, newExpectancy);
+    let mercury = new Mercury(newAge, newExpectancy);
+    let venus = new Venus(newAge, newExpectancy);
+    let mars = new Mars(newAge, newExpectancy);
+    let jupiter = new Jupiter(newAge, newExpectancy);
+    //Earth
+    if (earthAge.age <= earthAge.expectancy) {
       $("#earth").html(
-        `<li> Age ${spaceAge.age}.</li>
-        <li> Years left ${spaceAge.earthPastExpectacy}.</li>`);     
+        `<li> Age ${earthAge.age}.</li>
+        <li> Years left ${earthAge.earthPastExpectacy}.</li>`);     
     } else {
       $("#earth").html(
-        `<li> Age ${spaceAge.earthAge}.</li>
-        <li> Years past expectancy ${spaceAge.earthPastExpectacy}.</li>`);     
-    } if 
-    (spaceAge.age <= spaceAge.expectancy) {
+        `<li> Age ${earthAge.earthAge}.</li>
+        <li> Years past expectancy ${earthAge.earthPastExpectacy}.</li>`);     
+    //Mercury
+    } if (earthAge.age <= earthAge.expectancy) {
       $("#mercury").html(
-        `<li>Age ${spaceAge.mercuryAge}. </li>
-        <li>Years left ${spaceAge.mercuryExpectancy}. </li>`);    
+        `<li>Age ${mercury.mercuryAge}. </li>
+        <li>Years left ${mercury.mercuryExpectancy}. </li>`);    
     } else {
       $("#mercury").html(
-        `<li>Age ${spaceAge.mercuryAge}. </li>
-        <li>Years past expectancy ${spaceAge.mercuryExpectancy}. </li>`);  
-        
-    } if 
-    (spaceAge.age <= spaceAge.expectancy) {
+        `<li>Age ${mercury.mercuryAge}. </li>
+        <li>Years past expectancy ${mercury.mercuryExpectancy}. </li>`);  
+    //Venus
+    } if (earthAge.age <= earthAge.expectancy) {
       $("#venus").html(
-        `<li>Age ${spaceAge.venusAge}.</li>
-        <li>Years left ${spaceAge.venusExpectancy}.</li>`);          
+        `<li>Age ${venus.venusAge}.</li>
+        <li>Years left ${venus.venusExpectancy}.</li>`);          
     } else {
       $("#venus").html(
-        `<li>Age ${spaceAge.venusAge}.</li>   
-        <li>Years past expectancy ${spaceAge.venusExpectancy}.</li>`);
-    } if 
-    (spaceAge.age <= spaceAge.expectancy) {
+        `<li>Age ${venus.venusAge}.</li>   
+        <li>Years past expectancy ${venus.venusExpectancy}.</li>`);
+    //Mars
+    } if (earthAge.age <= earthAge.expectancy) {
       $("#mars").html(
-        `<li>Age ${spaceAge.marsAge}.</li>
-        <li>Years left ${spaceAge.marsExpectancy}.</li>`);         
+        `<li>Age ${mars.marsAge}.</li>
+        <li>Years left ${mars.marsExpectancy}.</li>`);         
     } else {
       $("#mars").html(
-        `<li>Age ${spaceAge.marsAge}.</li>
-        <li>Years past expectancy ${spaceAge.marsExpectancy}.</li>`);  
-    } if 
-    (spaceAge.age <= spaceAge.expectancy) {
+        `<li>Age ${mars.marsAge}.</li>
+        <li>Years past expectancy ${mars.marsExpectancy}.</li>`);  
+    //Jupiter
+    } if (earthAge.age <= earthAge.expectancy) {
       $("#jupiter").html(
-        `<li>Age ${spaceAge.jupiterAge}.</li>
-        <li>Years left ${spaceAge.jupiterExpectancy}.</li>`);                         
+        `<li>Age ${jupiter.jupiterAge}.</li>
+        <li>Years left ${jupiter.jupiterExpectancy}.</li>`);                         
     } else {
       $("#jupiter").html(
-        `<li>Age ${spaceAge.jupiterAge}.</li>
-        <li> Years past expectancy ${spaceAge.jupiterExpectancy}.</li>`);  
+        `<li>Age ${jupiter.jupiterAge}.</li>
+        <li> Years past expectancy ${jupiter.jupiterExpectancy}.</li>`);  
     }
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-// import {Mars} from './js/mars.js';
-// import {Venus} from './js/venus.js';
-// import {Jupiter} from './js/jupiter.js';
-// import {Mercury}from './js/mercury.js';
-
-
-// let mercury = new Mercury(newAge, newExpectancy);
-// let venus = new Venus(newAge, newExpectancy);
-// let mars = new Mars(newAge, newExpectancy);
-// let jupiter = new Jupiter(newAge, newExpectancy);
